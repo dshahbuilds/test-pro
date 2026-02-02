@@ -1,0 +1,21 @@
+{
+  "name": "Python & PostgreSQL Data Eng",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [5432, 8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "ms-ossdata.vscode-pgsql",
+        "ms-toolsai.datawrangler"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt || true",
+  "shutdownAction": "stopCompose"
+}
